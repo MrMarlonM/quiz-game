@@ -2,7 +2,7 @@
 On the website presented, you can play a short Quiz against the clock and reach the top of the leaderboard! You get asked 10 questions in a maximum of 100 seconds. The more you answer correctly in as little time as possible, the higher your score!
 
 ## User Story
-### First Visitor
+### First Time Visitor
 - As a new visitor to the page, I directly want to understand the structure
 - I want to be able to start a game quickly and easily
 - I want to learn something new and test my knowledge
@@ -40,3 +40,10 @@ Since it is important for the quiz that all questions and answers can be read an
 ![Image of the font in regular](documentation/font-regular.webp)
 ![Image of the font in bold](documentation/font-bold.webp)
 ![Image of the font in italic](documentation/font-italic.webp)
+
+## Credits
+### Tools
+The following tools and websites were used in the creation of this website:
+- [Google Fonts](https://fonts.google.com/) to find and implement the font
+- [Balsamiq](https://balsamiq.com/) for creation of the Wireframes
+- [freeconvert.com](https://www.freeconvert.com/de/webp-converter) to convert images to webp-format
