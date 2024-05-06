@@ -1,5 +1,4 @@
 # It's Quiz Time!
-
 On the website presented, you can play a short Quiz against the clock and reach the top of the leaderboard! You get asked 10 questions in a maximum of 100 seconds. The more you answer correctly in as little time as possible, the higher your score!
 
 ## User Story
@@ -15,7 +14,6 @@ On the website presented, you can play a short Quiz against the clock and reach 
 - I want to have different questions than the last time
 
 ## Features
-
 The website will feature the quiz and a leaderboard where the score with a chosen username gets posted after each finished round. Also, an option to send in questions over a form will be provided. 
 
 ### Technology used
@@ -26,3 +24,11 @@ The website will feature the quiz and a leaderboard where the score with a chose
 - For writing and editing the code [Gitpod](https://www.gitpod.io/) was used
 - To host the code and the website [Github](https://github.com/) was used
 - For the version control of the website [Git](https://git-scm.com/) was used
+
+## Design
+### Wireframes
+The following wireframes were drawn for the project:
+- Wireframe for [index.html](documentation/index.webp)
+- Wireframe for [leaderboard.html](documentation/leaderboard.webp)
+- Wireframe for [question.html](documentation/question.webp)
+- Wireframe for [submit.html](documentation/submit.webp)
