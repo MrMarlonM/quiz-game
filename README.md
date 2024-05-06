@@ -21,6 +21,7 @@ The website will feature the quiz and a leaderboard where the score with a chose
 ### Technology used
 - For the general structure of the page, [HTML](https://www.w3schools.com/html/) was used
 - For styling purposes, [CSS](https://www.w3schools.com/html/html_css.asp) was used
+- To add interactivity and dynamic behavior [Javascript](https://www.w3schools.com/js/) was used
 - For the creation of the wireframes and the workflow, [Balsamiq](https://balsamiq.com/) was used
 - For writing and editing the code [Gitpod](https://www.gitpod.io/) was used
 - To host the code and the website [Github](https://github.com/) was used
