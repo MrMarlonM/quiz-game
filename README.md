@@ -13,3 +13,15 @@ On the website presented, you can play a short Quiz against the clock and reach 
 - I want to top the high score
 - I want to send in questions of my own
 - I want to have different questions than the last time
+
+## Features
+
+The website will feature the quiz and a leaderboard where the score with a chosen username gets posted after each finished round. Also, an option to send in questions over a form will be provided. 
+
+### Technology used
+- For the general structure of the page, [HTML](https://www.w3schools.com/html/) was used
+- For styling purposes, [CSS](https://www.w3schools.com/html/html_css.asp) was used
+- For the creation of the wireframes and the workflow, [Balsamiq](https://balsamiq.com/) was used
+- For writing and editing the code [Gitpod](https://www.gitpod.io/) was used
+- To host the code and the website [Github](https://github.com/) was used
+- For the version control of the website [Git](https://git-scm.com/) was used
