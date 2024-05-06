@@ -32,3 +32,11 @@ The following wireframes were drawn for the project:
 - Wireframe for [leaderboard.html](documentation/leaderboard.webp)
 - Wireframe for [question.html](documentation/question.webp)
 - Wireframe for [submit.html](documentation/submit.webp)
+
+### Font
+The font used throughout the website is "Noto Serif", which is implemented through Google Fonts.  
+Since it is important for the quiz that all questions and answers can be read and understood quickly, the clean and readable design of "Noto Serif" is a great advantage. Through the balanced proportions and consistent spacing, everything looks visually very pleasing.
+
+![Image of the font in regular](documentation/font-regular.webp)
+![Image of the font in bold](documentation/font-bold.webp)
+![Image of the font in italic](documentation/font-italic.webp)
