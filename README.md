@@ -14,7 +14,7 @@ On the website presented, you can play a short Quiz against the clock and reach 
 - I want to have different questions than the last time
 
 ## Features
-The website will feature the quiz and a leaderboard where the score with a chosen username gets posted after each finished round. Also, an option to send in questions over a form will be provided. 
+The website will feature the quiz and the calculation of an individual score. Also, the questions will be presented randomly. Through this, the fun never ends!
 
 ### Technology used
 - For the general structure of the page, [HTML](https://www.w3schools.com/html/) was used
@@ -29,9 +29,7 @@ The website will feature the quiz and a leaderboard where the score with a chose
 ### Wireframes
 The following wireframes were drawn for the project:
 - Wireframe for [index.html](documentation/index.webp)
-- Wireframe for [leaderboard.html](documentation/leaderboard.webp)
-- Wireframe for [question.html](documentation/question.webp)
-- Wireframe for [submit.html](documentation/submit.webp)
+- Wireframe for [game.html](documentation/game.webp)
 
 ### Font
 The font used throughout the website is "Noto Serif", which is implemented through Google Fonts.  
