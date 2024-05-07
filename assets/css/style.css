@@ -1,3 +1,6 @@
+/*Import Google Font Noto Serif*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
 /*Asterix wildcard selector to override default styles; referenced from love running walkthrough project*/
 * {
     padding: 0;
@@ -13,7 +16,10 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    /*General Style*/
+    background-color: #CAF0F8;
     min-height: 100vh;
+    font-family: "Noto Serif", serif;
 }
 
 main {
@@ -23,6 +29,12 @@ main {
     display: flex;
     flex-flow: column;
     align-items: center;
+}
+
+/*Styling for Title*/
+h1 {
+    margin: 50px 0 0;
+    font-size: 250%;
 }
 
 /* Add style to the rules*/
@@ -41,7 +53,8 @@ main {
 }
 
 .rule-background h2 {
-    margin: 25px 0;
+    margin: 25px 10px;
+    text-align: center;
 }
 
 .rule {
@@ -50,4 +63,6 @@ main {
     box-shadow: 5px 5px 3px grey;
     width: 20rem;
     font-size: large;
+    padding: 5px 8px;
 }
+
