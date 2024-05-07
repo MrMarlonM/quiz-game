@@ -39,6 +39,11 @@ Since it is important for the quiz that all questions and answers can be read an
 ![Image of the font in bold](documentation/font-bold.webp)
 ![Image of the font in italic](documentation/font-italic.webp)
 
+### Colors
+For the coloring of the website, a mixture of blue and light cyan colors was used. Through the harmonious and subtle feeling they create, a peaceful atmosphere to concentrate in is created. At the same time, the colors deliver a certain contrast without being overpowering.
+
+![Image of the color palette used](documentation/colors.webp)
+
 ## Credits
 ### Tools
 The following tools and websites were used in the creation of this website:
