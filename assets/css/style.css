@@ -61,6 +61,7 @@ h1 {
 .text-field {
     background-color: #94CDF0;
     border: 1px solid black;
+    border-radius: 15px;
     box-shadow: 5px 5px 3px grey;
     width: 20rem;
     font-size: large;
@@ -85,7 +86,9 @@ h1 {
         /*General properties*/
         background-color: #94CDF0;
         border: 1px solid black;
+        border-radius: 15px;
         box-shadow: 5px 5px 3px grey;
+        padding: 5px 8px;
 }
 
 /*Style for button*/
@@ -98,6 +101,7 @@ button {
     margin: 20px;
     background-color: #94CDF0;
     border: 3px solid black;
+    border-radius: 15px;
     box-shadow: 5px 5px 3px grey;
 }
 
