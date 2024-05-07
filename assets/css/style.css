@@ -58,6 +58,7 @@ h1 {
     text-align: center;
 }
 
+/*Add style to elements of playfied*/
 .text-field {
     background-color: #94CDF0;
     border: 1px solid black;
@@ -68,7 +69,7 @@ h1 {
     padding: 5px 8px;
 }
 
-/*Style for game*/
+/*Style for game elements*/
 #question {
     height: 8rem;
     margin: 20px;
@@ -79,7 +80,9 @@ h1 {
     display: grid;
     gap: 10px;
     grid-template-columns:12rem 12rem;
-    grid-template-rows:8rem 8rem;
+    grid-template-rows:10rem 10rem;
+    font-size:smaller;
+    margin-bottom: 10px;
 }
 
 .answer > div {
@@ -89,6 +92,10 @@ h1 {
         border-radius: 15px;
         box-shadow: 5px 5px 3px grey;
         padding: 5px 8px;
+}
+
+.answer > div:hover {
+    background-color: #90E0EF; 
 }
 
 /*Style for button*/
@@ -130,4 +137,41 @@ footer a:hover {
     color: #00B4D8;
 }
 
+/*Media Query for mobile devices*/
+@media only screen and (max-width: 480px) {
+    /*General Style*/
+    main {
+        width: 100%;
+    }
+    
+    /*Style for index*/
+    .playfield {
+        width: auto;
+        height: auto;
+        gap: 0px;
+    }
 
+    .playfield h2 {
+        margin: 10px;
+    }
+
+    .text-field {
+        max-width: 15rem;
+        margin-bottom: 10px;
+
+    }
+
+    /*Style for game*/
+    .answer {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        width: 90%;
+        height: auto;
+    }
+
+    .answer > div {
+        margin-bottom: 10px;
+        height: auto;
+    }
+}
