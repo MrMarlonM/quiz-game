@@ -20,6 +20,7 @@ body {
     background-color: #CAF0F8;
     min-height: 100vh;
     font-family: "Noto Serif", serif;
+    color: #000000;
 }
 
 main {
@@ -39,7 +40,7 @@ h1 {
 
 /* Add style to the playfield*/
 .playfield {
-    background-color: #90E0EF;
+    background-color: #6DB9E9;
     border: 3px solid black;
     box-shadow: 5px 5px 3px grey;
     width: 30rem;
@@ -58,12 +59,33 @@ h1 {
 }
 
 .text-field {
-    background-color: #00B4D8;
+    background-color: #94CDF0;
     border: 1px solid black;
     box-shadow: 5px 5px 3px grey;
     width: 20rem;
     font-size: large;
     padding: 5px 8px;
+}
+
+/*Style for game*/
+#question {
+    height: 8rem;
+    margin: 20px;
+}
+
+.answer {
+    /*Grid properties*/
+    display: grid;
+    gap: 10px;
+    grid-template-columns:12rem 12rem;
+    grid-template-rows:8rem 8rem;
+}
+
+.answer > div {
+        /*General properties*/
+        background-color: #94CDF0;
+        border: 1px solid black;
+        box-shadow: 5px 5px 3px grey;
 }
 
 /*Style for button*/
@@ -74,7 +96,7 @@ button {
     font-size: large;
     font-weight: bold;
     margin: 20px;
-    background-color: #00B4D8;
+    background-color: #94CDF0;
     border: 3px solid black;
     box-shadow: 5px 5px 3px grey;
 }
