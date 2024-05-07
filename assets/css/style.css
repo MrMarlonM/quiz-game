@@ -66,3 +66,19 @@ h1 {
     padding: 5px 8px;
 }
 
+/*Style for button*/
+button {
+    width: 15rem;
+    height: 5rem;
+    font-family: "Noto Serif", serif;
+    font-size: large;
+    font-weight: bold;
+    margin: 20px;
+    background-color: #00B4D8;
+    border: 3px solid black;
+    box-shadow: 5px 5px 3px grey;
+}
+
+button:hover {
+    background-color: #90E0EF;
+}
