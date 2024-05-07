@@ -14,11 +14,14 @@ On the website presented, you can play a short Quiz against the clock and reach 
 - I want to have different questions than the last time
 
 ## Features
-The website will feature the quiz and the calculation of an individual score. Also, the questions will be presented randomly. Through this, the fun never ends!
+The website will feature an easy-to-understand quiz which you can start to play directly! Interesting questions on many different topics get asked randomly and a score for each round gets calculated.
 
 ### Technology used
 - For the general structure of the page, [HTML](https://www.w3schools.com/html/) was used
 - For styling purposes, [CSS](https://www.w3schools.com/html/html_css.asp) was used
+    - [Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) was used to make elements responsive
+    - [Media queries](https://www.w3schools.com/css/css3_mediaqueries.asp) were used to change the dynamic of the content for smaller screens
+    - [Grid](https://www.w3schools.com/css/css_grid.asp) was used to create the answer section of the game
 - To add interactivity and dynamic behavior [Javascript](https://www.w3schools.com/js/) was used
 - For the creation of the wireframes and the workflow, [Balsamiq](https://balsamiq.com/) was used
 - For writing and editing the code [Gitpod](https://www.gitpod.io/) was used
@@ -43,6 +46,15 @@ Since it is important for the quiz that all questions and answers can be read an
 For the coloring of the website, a mixture of blue and light cyan colors was used. Through the harmonious and subtle feeling they create, a peaceful atmosphere to concentrate in is created. At the same time, the colors deliver a certain contrast without being overpowering.
 
 ![Image of the color palette used](documentation/colors.webp)
+
+## Bugs
+### Unsolved Bugs
+No unsolved Bugs are left.
+
+### Solved Bugs
+While developing the game, the following bugs were found and corrected:
+- When questions or answers got too big, they spilled out of their containers and made it impossible to read them.  
+To solve the problem, the containers holding them became flexible properties by changing height to min-height. This resolved the issue since the container can always get longer, even on smaller devices with a fixed max-width.
 
 ## Credits
 ### Tools
