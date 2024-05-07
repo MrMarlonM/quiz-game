@@ -37,8 +37,8 @@ h1 {
     font-size: 250%;
 }
 
-/* Add style to the rules*/
-.rule-background {
+/* Add style to the playfield*/
+.playfield {
     background-color: #90E0EF;
     border: 3px solid black;
     box-shadow: 5px 5px 3px grey;
@@ -52,12 +52,12 @@ h1 {
     gap: 10px;
 }
 
-.rule-background h2 {
+.playfield h2 {
     margin: 25px 10px;
     text-align: center;
 }
 
-.rule {
+.text-field {
     background-color: #00B4D8;
     border: 1px solid black;
     box-shadow: 5px 5px 3px grey;
@@ -82,3 +82,26 @@ button {
 button:hover {
     background-color: #90E0EF;
 }
+
+/*Style for footer*/
+footer {
+    /*General Style*/
+    width: 60%;
+    margin: 10px;
+    /*Flex-parent*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*Styling for link in footer*/
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    color: #00B4D8;
+}
+
+
