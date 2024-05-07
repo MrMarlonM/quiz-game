@@ -18,9 +18,36 @@ body {
 
 main {
     flex: 1 1 auto;
+    width: 80%;
+    /*Flex parent*/
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 }
 
 /* Add style to the rules*/
 .rule-background {
     background-color: #90E0EF;
+    border: 3px solid black;
+    box-shadow: 5px 5px 3px grey;
+    width: 30rem;
+    height: 30rem;
+    /*Flex parent*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.rule-background h2 {
+    margin: 25px 0;
+}
+
+.rule {
+    background-color: #00B4D8;
+    border: 1px solid black;
+    box-shadow: 5px 5px 3px grey;
+    width: 20rem;
+    font-size: large;
 }
