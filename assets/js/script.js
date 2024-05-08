@@ -237,11 +237,11 @@ function startGame() {
  * out of the questions array
  */
 function updateQuiz(question) {
-    getElementById('question').textContent = question.question;
-    getElementById('answer1').textContent = question.answer1[0];
-    getElementById('answer2').textContent = question.answer2[0];
-    getElementById('answer3').textContent = question.answer3[0];
-    getElementById('answer4').textContent = question.answer4[0];
+    document.getElementById('question').textContent = question.question;
+    document.getElementById('answer1').textContent = question.answer1[0];
+    document.getElementById('answer2').textContent = question.answer2[0];
+    document.getElementById('answer3').textContent = question.answer3[0];
+    document.getElementById('answer4').textContent = question.answer4[0];
 };
 
 function randomQuestions() {
