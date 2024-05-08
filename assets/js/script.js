@@ -211,9 +211,13 @@ const questions = [
     },
 ]
 
+/**
+ * The function controls the game from start to finish
+ */
 function startGame() {
     let questionsAsked = 0;
     let time = 0;
+
     updateQuiz();
     startTimer(time);
     if (time === 1000 || questionsAsked === 10) {
@@ -228,31 +232,19 @@ function startGame() {
     }
 };
 
+/**
+ * When called, the function updates the game with a new question and a new answer
+ * out of the questions array
+ */
+function updateQuiz(question) {
+    getElementById('question').textContent = question.question;
+    getElementById('answer1').textContent = question.answer1[0];
+    getElementById('answer2').textContent = question.answer2[0];
+    getElementById('answer3').textContent = question.answer3[0];
+    getElementById('answer4').textContent = question.answer4[0];
+};
+
 function randomQuestions() {
-
-};
-
-function updateQuiz() {
-
-}
-
-function addQuestion() {
-
-};
-
-function addAnswer1() {
-
-};
-
-function addAnswer2() {
-
-};
-
-function addAnswer3() {
-
-};
-
-function addAnswer4() {
 
 };
 
