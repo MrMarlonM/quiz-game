@@ -217,6 +217,7 @@ const questions = [
 function startGame() {
     let questionsAsked = 0;
     let time = 0;
+    let score = 0;
 
     updateQuiz();
     startTimer(time);
@@ -224,7 +225,7 @@ function startGame() {
         endGame();
     } else {
         if (answer === true) {
-        updateScore();
+        score++;
         updateQuiz();
         } else {
             updateQuiz();
@@ -244,12 +245,16 @@ function updateQuiz(question) {
     document.getElementById('answer4').textContent = question.answer4[0];
 };
 
-function randomQuestions() {
-
-};
-
-function updateScore() {
-
+/**
+ * When called, the function creates a radom array using the Fisher Yates Method
+ */
+function randomQuestions(array) {
+    for (let i = array.length -1; i > 0; i--) {
+        let random = Math.floor(Math.random() * (i + 1));
+        let safe = array[i];
+        array[i] = array[random];
+        array[random] = safe;
+    }
 };
 
 function startTimer() {
