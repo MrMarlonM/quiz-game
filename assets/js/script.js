@@ -228,17 +228,22 @@ function startGame() {
     let time = 0;
     let score = 0;
 
-    updateQuiz(questions[questionsAsked]);
-    document.querySelector('.answer-box').addEventListener('click'), function(event) {
-
-    }
+    if (questionsAsked <= 9) {
+        updateQuiz(questions[questionsAsked]);
     
-    if (questionsAsked < 10) {
-        checkAnswer();
-        ++questionsAsked;
-    } else {
-        alert('Game is over now!');
-        }    
+        document.querySelector('.answer').addEventListener('click', function(event) {
+            let answerId = event.target.id;
+            let isCorrect = checkAnswer(answerId, questionsAsked);
+        
+        if (isCorrect) {
+            alert('Correct')    
+            ++questionsAsked;
+        } else {
+            alert('Game is over now!');
+            ++questionsAsked;
+        }
+        });
+    }        
 };
 
 /**
@@ -268,8 +273,20 @@ function randomQuestions(array) {
 /**
  * Check if the answer is correct and give out a value of true or false
  */
-function checkAnswer(answerId) {
-    let 
+function checkAnswer(answerId, questionsAsked) {
+    let selectedAnswer;
+    if (answerId === 'answer1') {
+        selectedAnswer = questions[questionsAsked].answer1;
+    } else if (answerId === 'answer2') {
+        selectedAnswer = questions[questionsAsked].answer2;
+    } else if (answerId === 'answer3') {
+        selectedAnswer = questions[questionsAsked].answer3;
+    } else if (answerId === 'answer4') {
+        selectedAnswer = questions[questionsAsked].answer4;
+    }
+    let isCorrect = selectedAnswer[1];
+
+    return isCorrect;
 }
 
 function startTimer() {
