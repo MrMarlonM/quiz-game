@@ -210,3 +210,56 @@ const questions = [
         answer4: ['Alexander Fleming', true],
     },
 ]
+
+function startGame() {
+    let questionsAsked = 0;
+    let time = 0;
+    updateQuiz();
+    startTimer(time);
+    if (time === 1000 || questionsAsked === 10) {
+        endGame();
+    } else {
+        if (answer === true) {
+        updateScore();
+        updateQuiz();
+        } else {
+            updateQuiz();
+        }    
+    }
+};
+
+function randomQuestions() {
+
+};
+
+function updateQuiz() {
+
+}
+
+function addQuestion() {
+
+};
+
+function addAnswer1() {
+
+};
+
+function addAnswer2() {
+
+};
+
+function addAnswer3() {
+
+};
+
+function addAnswer4() {
+
+};
+
+function updateScore() {
+
+};
+
+function startTimer() {
+
+};
