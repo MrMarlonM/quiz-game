@@ -56,6 +56,9 @@ While developing the game, the following bugs were found and corrected:
 - When questions or answers got too big, they spilled out of their containers and made it impossible to read them.  
 To solve the problem, the containers holding them became flexible properties by changing height to min-height. This resolved the issue since the container can always get longer, even on smaller devices with a fixed max-width.
 
+- When starting the game, answering the first question didn't update the quiz. The player could click answers infinitely without progressing to the next question. This also prevented the checkAnswer function from working properly.
+To solve the problem, I moved the event listener for answer clicks and the logic for checking answers and updating the score outside of the startGame function. This ensures the listener and logic are active throughout the game. Additionally, the startGame function now receives the questionsAsked and score variables from the event listener logic, allowing the game to update after each answer and track the score.
+
 ## Credits
 ### Tools
 The following tools and websites were used in the creation of this website:
