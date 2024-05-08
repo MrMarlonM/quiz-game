@@ -212,6 +212,15 @@ const questions = [
 ]
 
 /**
+ * The code that gets executed, once the game.html website is fully loaded and
+ * starts the game
+ */
+document.addEventListener("DOMContentLoaded", function() {
+    randomQuestions(questions);
+    startGame();
+})
+
+/**
  * The function controls the game from start to finish
  */
 function startGame() {
@@ -219,18 +228,17 @@ function startGame() {
     let time = 0;
     let score = 0;
 
-    updateQuiz();
-    startTimer(time);
-    if (time === 1000 || questionsAsked === 10) {
-        endGame();
-    } else {
-        if (answer === true) {
-        score++;
-        updateQuiz();
-        } else {
-            updateQuiz();
-        }    
+    updateQuiz(questions[questionsAsked]);
+    document.querySelector('.answer-box').addEventListener('click'), function(event) {
+
     }
+    
+    if (questionsAsked < 10) {
+        checkAnswer();
+        ++questionsAsked;
+    } else {
+        alert('Game is over now!');
+        }    
 };
 
 /**
@@ -256,6 +264,13 @@ function randomQuestions(array) {
         array[random] = safe;
     }
 };
+
+/**
+ * Check if the answer is correct and give out a value of true or false
+ */
+function checkAnswer(answerId) {
+    let 
+}
 
 function startTimer() {
 
