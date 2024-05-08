@@ -62,3 +62,6 @@ The following tools and websites were used in the creation of this website:
 - [Google Fonts](https://fonts.google.com/) to find and implement the font
 - [Balsamiq](https://balsamiq.com/) for creation of the Wireframes
 - [freeconvert.com](https://www.freeconvert.com/de/webp-converter) to convert images to webp-format
+
+### Content
+The questions and answers are taken from the ["LiveReacting Blog"](https://blog.livereacting.com/100-fun-general-knowledge-quiz-questions-2024/).
