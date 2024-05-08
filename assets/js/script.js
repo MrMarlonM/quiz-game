@@ -219,38 +219,40 @@ const questions = [
  * The code that gets executed, once the game.html website is fully loaded and
  * starts the game
  */
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     randomQuestions(questions);
     let questionsAsked = 0;
-    document.querySelector('.answer').addEventListener('click', function(event) {
+    let score = 0;
+    startGame(questionsAsked, score);
+    document.querySelector('.answer').addEventListener('click', function (event) {
         let answerId = event.target.id;
         let isCorrect = checkAnswer(answerId, questionsAsked);
-    
-    if (isCorrect) {
-        alert('Correct')    
-        ++questionsAsked;
-    } else {
-        alert('Game is over now!');
-        ++questionsAsked;
-    }
 
-    document.getElementsByClassName('answer').style.pointerEvents = 'none';
+        if (isCorrect) {
+            alert('Correct')
+            ++questionsAsked;
+            ++score;
+            startGame(questionsAsked, score);
+        } else {
+            alert('Game is over now!');
+            ++questionsAsked;
+            startGame(questionsAsked, score);
+        }
     });
-
-    startGame();
 })
 
 /**
- * The function controls the game from start to finish
+ * The function starts each round of the game, until the maximum of 10 games is
+ * reached. Then it will summon the endQuiz() function to end the game.
  */
-function startGame() {
-    let questionsAsked = 0;
+function startGame(questionsAsked, score) {
     let time = 0;
-    let score = 0;
 
     if (questionsAsked < 10) {
         updateQuiz(questions[questionsAsked]);
-    }        
+    } else {
+        endQuiz(score);
+    }
 };
 
 /**
@@ -269,7 +271,7 @@ function updateQuiz(question) {
  * When called, the function creates a radom array using the Fisher Yates Method
  */
 function randomQuestions(array) {
-    for (let i = array.length -1; i > 0; i--) {
+    for (let i = array.length - 1; i > 0; i--) {
         let random = Math.floor(Math.random() * (i + 1));
         let safe = array[i];
         array[i] = array[random];
@@ -298,3 +300,17 @@ function checkAnswer(answerId, questionsAsked) {
 function startTimer() {
 
 };
+
+/**
+ * The function gets called to show the endscreen of the quiz
+ */
+function endQuiz(score) {
+    document.getElementById('endscreen').innerHTML = `<div class="text-field">
+    Your score: ${score}</div>
+    <form method="GET" action="game.html">
+            <button id="start-game" aria-label="click on the button to
+        start a new game">
+                Start a new Game
+            </button>
+        </form>`;
+}
