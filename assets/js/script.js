@@ -1,3 +1,7 @@
+/**
+ * Array of questions for the quiz
+ */
+
 const questions = [
     {
         question: 'Who wrote the novel "1984"?',
@@ -217,6 +221,22 @@ const questions = [
  */
 document.addEventListener("DOMContentLoaded", function() {
     randomQuestions(questions);
+    let questionsAsked = 0;
+    document.querySelector('.answer').addEventListener('click', function(event) {
+        let answerId = event.target.id;
+        let isCorrect = checkAnswer(answerId, questionsAsked);
+    
+    if (isCorrect) {
+        alert('Correct')    
+        ++questionsAsked;
+    } else {
+        alert('Game is over now!');
+        ++questionsAsked;
+    }
+
+    document.getElementsByClassName('answer').style.pointerEvents = 'none';
+    });
+
     startGame();
 })
 
@@ -228,26 +248,13 @@ function startGame() {
     let time = 0;
     let score = 0;
 
-    if (questionsAsked <= 9) {
+    if (questionsAsked < 10) {
         updateQuiz(questions[questionsAsked]);
-    
-        document.querySelector('.answer').addEventListener('click', function(event) {
-            let answerId = event.target.id;
-            let isCorrect = checkAnswer(answerId, questionsAsked);
-        
-        if (isCorrect) {
-            alert('Correct')    
-            ++questionsAsked;
-        } else {
-            alert('Game is over now!');
-            ++questionsAsked;
-        }
-        });
     }        
 };
 
 /**
- * When called, the function updates the game with a new question and a new answer
+ * When called, the function updates the game with a new question and new answers
  * out of the questions array
  */
 function updateQuiz(question) {
@@ -285,7 +292,6 @@ function checkAnswer(answerId, questionsAsked) {
         selectedAnswer = questions[questionsAsked].answer4;
     }
     let isCorrect = selectedAnswer[1];
-
     return isCorrect;
 }
 
