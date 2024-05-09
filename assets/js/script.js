@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function() {
         endQuiz(score);
     }, 10000);
-   
+
 // Logic that listens for a click on one of the answers and then progresses with the next one
     document.querySelector('.answer').addEventListener('click', function (event) {
         let answerId = event.target.id;
