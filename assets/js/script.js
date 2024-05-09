@@ -85,11 +85,18 @@
         return isCorrect;
     }
     
+    // Gets called when answer is correct, to update the correct answers by 1
+    function updateCorrectAnswers() {
+        let oldScore = parseInt(document.getElementById('correct-answers').innerHTML);
+        let newScore = oldScore + 1;
+        document.getElementById('correct-answers').innerHTML = newScore;
+    }
+
     /** 
      *Gets called every second to update the time used by the player by 1 
      */
     function updateTime() {
-        let oldTime = document.getElementById('time-remaining').innerHTML
+        let oldTime = parseInt(document.getElementById('time-remaining').innerHTML);
         let newTime = oldTime - 1;
         document.getElementById('time-remaining').innerHTML = newTime;
     };
@@ -98,20 +105,21 @@
      * Calculate the endscore out of the time used and the number of correct answers
      */
     function calculateScore() {
-        let correctAnswers = document.getElementById('correct-answers').innerHTML 
-        let timeRemaining = document.getElementById('time-remaining').innerHTML
+        let correctAnswers = parseInt(document.getElementById('correct-answers').innerHTML); 
+        let timeRemaining = parseInt(document.getElementById('time-remaining').innerHTML);
+        let score = correctAnswers * 100 + timeRemaining * 10;
 
-        score = correctAnswers * 100 + timeRemaining * 10;
+        return score;
     }
     
     /**
      * The function gets called to show the endscreen of the quiz
      */
     function endQuiz() {
-        let score = calculateScore();
+        let finalScore = calculateScore();
         document.getElementById('endscreen').innerHTML = `
         <div class="playfield last-screen">
-            <div class="text-field"><strong>Your score:</strong> ${score}</div>
+            <div class="text-field"><strong>Your score:</strong> ${finalScore}</div>
             <form method="GET" action="game.html">
                 <button id="start-game" aria-label="click on the button to
                 start a new game">

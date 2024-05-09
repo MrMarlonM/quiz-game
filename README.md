@@ -60,6 +60,10 @@ To address this, the container elements responsible for holding questions and an
 - When starting the game, answering the first question didn't update the quiz. The player could click answers infinitely without progressing to the next question. This also prevented the checkAnswer function from working properly.
 To solve the problem, I moved the event listener for answer clicks and the logic for checking answers and updating the score outside of the startGame function. This ensures the listener and logic are active throughout the game. Additionally, the startGame function now receives the questionsAsked and score variables from the event listener logic, allowing the game to update after each answer and track the score.
 
+- The final score wasn't displaying correctly on the end screen. The endQuiz function received an undefined value for the score.
+Whilst checking the code, the issue could be tracked down to the calculateScore function. Here were two problems found. The variable score wasn't declared with let and the return statement for score was missing.
+After correcting this two errors the score gets calculated correctly and shows on the endscreen.
+
 ## Credits
 ### Tools
 The following tools and websites were used in the creation of this website:
