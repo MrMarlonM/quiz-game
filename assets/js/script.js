@@ -1,7 +1,124 @@
+ // Makes sure the game starts, once the game.html website is fully loaded 
+ document.addEventListener("DOMContentLoaded", function () {
+
+    // Random question gets created and first question + answers gets loaded
+        randomQuestions(questions);
+        let questionsAsked = 0;
+        let score = 0;
+        startGame(questionsAsked, score);
+    
+    // Start timer for game, which calls the end game function when time is over
+        setTimeout(function() {
+            endQuiz(score);
+        }, 100000);
+    
+    // Logic that listens for a click on one of the answers and then progresses with the next one
+        document.querySelector('.answer').addEventListener('click', function (event) {
+            let answerId = event.target.id;
+            let isCorrect = checkAnswer(answerId, questionsAsked);
+    
+            if (isCorrect) {
+                ++questionsAsked;
+                ++score;
+                startGame(questionsAsked, score);
+            } else {
+                ++questionsAsked;
+                startGame(questionsAsked, score);
+            }
+        });
+    })
+    
+    /**
+     * The function starts each round of the game, until the maximum of 10 games is
+     * reached. Then it will summon the endQuiz() function to end the game.
+     */
+    function startGame(questionsAsked, score) {
+        let time = 0;
+    
+        if (questionsAsked < 10) {
+            updateQuiz(questions[questionsAsked]);
+        } else {
+            endQuiz(score);
+        }
+    };
+    
+    /**
+     * When called, the function updates the game with a new question and new answers
+     * out of the questions array
+     */
+    function updateQuiz(question) {
+        document.getElementById('question').textContent = question.question;
+        document.getElementById('answer1').textContent = question.answer1[0];
+        document.getElementById('answer2').textContent = question.answer2[0];
+        document.getElementById('answer3').textContent = question.answer3[0];
+        document.getElementById('answer4').textContent = question.answer4[0];
+    };
+    
+    /**
+     * When called, the function creates a radom array using the Fisher Yates Method
+     */
+    function randomQuestions(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            let random = Math.floor(Math.random() * (i + 1));
+            let safe = array[i];
+            array[i] = array[random];
+            array[random] = safe;
+        }
+    };
+    
+    /**
+     * Check if the answer is correct and give out a value of true or false
+     */
+    function checkAnswer(answerId, questionsAsked) {
+        let selectedAnswer;
+        if (answerId === 'answer1') {
+            selectedAnswer = questions[questionsAsked].answer1;
+        } else if (answerId === 'answer2') {
+            selectedAnswer = questions[questionsAsked].answer2;
+        } else if (answerId === 'answer3') {
+            selectedAnswer = questions[questionsAsked].answer3;
+        } else if (answerId === 'answer4') {
+            selectedAnswer = questions[questionsAsked].answer4;
+        }
+        let isCorrect = selectedAnswer[1];
+        return isCorrect;
+    }
+    
+    /** 
+     *Gets called every second to update the time used by the player by 1 
+     */
+    function updateTime() {
+        let oldTime = document.getElementById('time-remaining').innerHTML
+        let newTime = oldTime - 1;
+        document.getElementById('time-remaining').innerHTML = newTime;
+    };
+    
+    /**
+     * Calculate the endscore out of the time used and the number of correct answers
+     */
+    function calculateScore() {
+    
+    }
+    
+    /**
+     * The function gets called to show the endscreen of the quiz
+     */
+    function endQuiz(score) {
+        document.getElementById('endscreen').innerHTML = `
+        <div class="playfield last-screen">
+            <div class="text-field"><strong>Your score:</strong> ${score}</div>
+            <form method="GET" action="game.html">
+                <button id="start-game" aria-label="click on the button to
+                start a new game">
+                    Start a new Game
+                </button>
+            </form>
+        </div>`;
+    }
+
 /**
  * Array of questions for the quiz
  */
-
 const questions = [
     {
         question: 'Who wrote the novel "1984"?',
@@ -215,118 +332,3 @@ const questions = [
     },
 ]
 
- // Makes sure the game starts, once the game.html website is fully loaded 
-document.addEventListener("DOMContentLoaded", function () {
-
-// Random question gets created and first question + answers gets loaded
-    randomQuestions(questions);
-    let questionsAsked = 0;
-    let score = 0;
-    startGame(questionsAsked, score);
-
-// Start timer for game, which calls the end game function when time is over
-    setTimeout(function() {
-        endQuiz(score);
-    }, 10000);
-
-// Logic that listens for a click on one of the answers and then progresses with the next one
-    document.querySelector('.answer').addEventListener('click', function (event) {
-        let answerId = event.target.id;
-        let isCorrect = checkAnswer(answerId, questionsAsked);
-
-        if (isCorrect) {
-            ++questionsAsked;
-            ++score;
-            startGame(questionsAsked, score);
-        } else {
-            ++questionsAsked;
-            startGame(questionsAsked, score);
-        }
-    });
-})
-
-/**
- * The function starts each round of the game, until the maximum of 10 games is
- * reached. Then it will summon the endQuiz() function to end the game.
- */
-function startGame(questionsAsked, score) {
-    let time = 0;
-
-    if (questionsAsked < 10) {
-        updateQuiz(questions[questionsAsked]);
-    } else {
-        endQuiz(score);
-    }
-};
-
-/**
- * When called, the function updates the game with a new question and new answers
- * out of the questions array
- */
-function updateQuiz(question) {
-    document.getElementById('question').textContent = question.question;
-    document.getElementById('answer1').textContent = question.answer1[0];
-    document.getElementById('answer2').textContent = question.answer2[0];
-    document.getElementById('answer3').textContent = question.answer3[0];
-    document.getElementById('answer4').textContent = question.answer4[0];
-};
-
-/**
- * When called, the function creates a radom array using the Fisher Yates Method
- */
-function randomQuestions(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        let random = Math.floor(Math.random() * (i + 1));
-        let safe = array[i];
-        array[i] = array[random];
-        array[random] = safe;
-    }
-};
-
-/**
- * Check if the answer is correct and give out a value of true or false
- */
-function checkAnswer(answerId, questionsAsked) {
-    let selectedAnswer;
-    if (answerId === 'answer1') {
-        selectedAnswer = questions[questionsAsked].answer1;
-    } else if (answerId === 'answer2') {
-        selectedAnswer = questions[questionsAsked].answer2;
-    } else if (answerId === 'answer3') {
-        selectedAnswer = questions[questionsAsked].answer3;
-    } else if (answerId === 'answer4') {
-        selectedAnswer = questions[questionsAsked].answer4;
-    }
-    let isCorrect = selectedAnswer[1];
-    return isCorrect;
-}
-
-/** 
- *Gets called every second to update the time used by the player by 1 
- */
-function updateTime() {
-
-};
-
-/**
- * Calculate the endscore out of the time used and the number of correct answers
- */
-function calculateScore() {
-
-}
-
-/**
- * The function gets called to show the endscreen of the quiz
- */
-function endQuiz(score) {
-    document.getElementById('endscreen').innerHTML = `
-    <div class="playfield last-screen">
-        <div class="text-field"><strong>Your score:</strong> ${score}</div>
-        <form method="GET" action="game.html">
-            <button id="start-game" aria-label="click on the button to
-            start a new game">
-                Start a new Game
-            </button>
-        </form>
-    </div>`;
-}
