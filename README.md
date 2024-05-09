@@ -53,8 +53,9 @@ No unsolved Bugs are left.
 
 ### Solved Bugs
 While developing the game, the following bugs were found and corrected:
-- When questions or answers got too big, they spilled out of their containers and made it impossible to read them.  
-To solve the problem, the containers holding them became flexible properties by changing height to min-height. This resolved the issue since the container can always get longer, even on smaller devices with a fixed max-width.
+- The quiz UI encountered a layout issue when displaying lengthy questions or answers. Text content overflowed its designated containers, making it unreadable on some screens.
+To address this, the container elements responsible for holding questions and answers were modified. Their height property was adjusted from a fixed value to min-height. This allows the containers to dynamically expand vertically to accommodate overflowing content, ensuring readability even on smaller devices with limited screen width (constrained by a fixed max-width property, if applicable).
+
 
 - When starting the game, answering the first question didn't update the quiz. The player could click answers infinitely without progressing to the next question. This also prevented the checkAnswer function from working properly.
 To solve the problem, I moved the event listener for answer clicks and the logic for checking answers and updating the score outside of the startGame function. This ensures the listener and logic are active throughout the game. Additionally, the startGame function now receives the questionsAsked and score variables from the event listener logic, allowing the game to update after each answer and track the score.
@@ -65,6 +66,14 @@ The following tools and websites were used in the creation of this website:
 - [Google Fonts](https://fonts.google.com/) to find and implement the font
 - [Balsamiq](https://balsamiq.com/) for creation of the Wireframes
 - [freeconvert.com](https://www.freeconvert.com/de/webp-converter) to convert images to webp-format
+- [Dopelycolors](https://colors.dopely.top/) to find a color palette
 
 ### Content
 The questions and answers are taken from the ["LiveReacting Blog"](https://blog.livereacting.com/100-fun-general-knowledge-quiz-questions-2024/).
+
+### Logic
+To build the Fisher-Yates sorting algorithm that randomizes the array the following content was very helpful:
+- [w3schools about the Fisher-Yates Method](https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_sort_random2)
+- [A concise video of "Bro Code" about the Fisher-Yates-Shuffle](https://www.youtube.com/watch?v=FGAUekwri1Q)
+
+To build the eventListeners for the project, it was really helpful to look up again how it was done in the [Love Maths Walkthrough project](https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode).
