@@ -126,6 +126,12 @@
                     Start a new Game
                 </button>
             </form>
+            <form method="GET" action="index.html">
+                <button id="start-game" aria-label="click on the button and get back
+                to the rules">
+                    Go to the Rules
+                </button>
+            </form>
         </div>`;
     }
 
