@@ -220,10 +220,18 @@ const questions = [
  * starts the game
  */
 document.addEventListener("DOMContentLoaded", function () {
+// Random question gets created and first question + answers gets loaded
     randomQuestions(questions);
     let questionsAsked = 0;
     let score = 0;
     startGame(questionsAsked, score);
+
+// Start timer for game, which calls the end game function when time is over
+    setTimeout(function() {
+        endQuiz(score);
+    }, 10000);
+   
+// Logic that listens for a click on one of the answers and then progresses with the next one
     document.querySelector('.answer').addEventListener('click', function (event) {
         let answerId = event.target.id;
         let isCorrect = checkAnswer(answerId, questionsAsked);
