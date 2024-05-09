@@ -58,6 +58,13 @@ h1 {
     text-align: center;
 }
 
+/*Change position of content on last field*/
+.last-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /*Add style to elements of playfied*/
 .text-field {
     background-color: #94CDF0;

@@ -229,12 +229,12 @@ document.addEventListener("DOMContentLoaded", function () {
         let isCorrect = checkAnswer(answerId, questionsAsked);
 
         if (isCorrect) {
-            alert('Correct')
+            alert('Correct Answer!')
             ++questionsAsked;
             ++score;
             startGame(questionsAsked, score);
         } else {
-            alert('Game is over now!');
+            alert('Wrong Answer!');
             ++questionsAsked;
             startGame(questionsAsked, score);
         }
@@ -305,12 +305,14 @@ function startTimer() {
  * The function gets called to show the endscreen of the quiz
  */
 function endQuiz(score) {
-    document.getElementById('endscreen').innerHTML = `<div class="text-field">
-    Your score: ${score}</div>
-    <form method="GET" action="game.html">
+    document.getElementById('endscreen').innerHTML = `
+    <div class="playfield last-screen">
+        <div class="text-field"><strong>Your score:</strong> ${score}</div>
+        <form method="GET" action="game.html">
             <button id="start-game" aria-label="click on the button to
-        start a new game">
+            start a new game">
                 Start a new Game
             </button>
-        </form>`;
+        </form>
+    </div>`;
 }
