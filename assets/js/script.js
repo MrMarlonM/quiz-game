@@ -4,13 +4,16 @@
     // Random question gets created and first question + answers gets loaded
         randomQuestions(questions);
         let questionsAsked = 0;
-        let score = 0;
-        startGame(questionsAsked, score);
+        let correctAnswers = 0;
+        startGame(questionsAsked);
     
     // Start timer for game, which calls the end game function when time is over
         setTimeout(function() {
-            endQuiz(score);
+            endQuiz();
         }, 100000);
+
+    // starts countdown for time remaining    
+        setInterval(updateTime, 1000);
     
     // Logic that listens for a click on one of the answers and then progresses with the next one
         document.querySelector('.answer').addEventListener('click', function (event) {
@@ -19,11 +22,11 @@
     
             if (isCorrect) {
                 ++questionsAsked;
-                ++score;
-                startGame(questionsAsked, score);
+                updateCorrectAnswers();
+                startGame(questionsAsked);
             } else {
                 ++questionsAsked;
-                startGame(questionsAsked, score);
+                startGame(questionsAsked);
             }
         });
     })
@@ -32,13 +35,11 @@
      * The function starts each round of the game, until the maximum of 10 games is
      * reached. Then it will summon the endQuiz() function to end the game.
      */
-    function startGame(questionsAsked, score) {
-        let time = 0;
-    
+    function startGame(questionsAsked) {
         if (questionsAsked < 10) {
             updateQuiz(questions[questionsAsked]);
         } else {
-            endQuiz(score);
+            endQuiz();
         }
     };
     
@@ -97,13 +98,17 @@
      * Calculate the endscore out of the time used and the number of correct answers
      */
     function calculateScore() {
-    
+        let correctAnswers = document.getElementById('correct-answers').innerHTML 
+        let timeRemaining = document.getElementById('time-remaining').innerHTML
+
+        score = correctAnswers * 100 + timeRemaining * 10;
     }
     
     /**
      * The function gets called to show the endscreen of the quiz
      */
-    function endQuiz(score) {
+    function endQuiz() {
+        let score = calculateScore();
         document.getElementById('endscreen').innerHTML = `
         <div class="playfield last-screen">
             <div class="text-field"><strong>Your score:</strong> ${score}</div>
