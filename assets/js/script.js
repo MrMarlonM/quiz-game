@@ -215,11 +215,9 @@ const questions = [
     },
 ]
 
-/**
- * The code that gets executed, once the game.html website is fully loaded and
- * starts the game
- */
+ // Makes sure the game starts, once the game.html website is fully loaded 
 document.addEventListener("DOMContentLoaded", function () {
+
 // Random question gets created and first question + answers gets loaded
     randomQuestions(questions);
     let questionsAsked = 0;
@@ -237,12 +235,10 @@ document.addEventListener("DOMContentLoaded", function () {
         let isCorrect = checkAnswer(answerId, questionsAsked);
 
         if (isCorrect) {
-            alert('Correct Answer!')
             ++questionsAsked;
             ++score;
             startGame(questionsAsked, score);
         } else {
-            alert('Wrong Answer!');
             ++questionsAsked;
             startGame(questionsAsked, score);
         }
@@ -305,9 +301,19 @@ function checkAnswer(answerId, questionsAsked) {
     return isCorrect;
 }
 
-function startTimer() {
+/** 
+ *Gets called every second to update the time used by the player by 1 
+ */
+function updateTime() {
 
 };
+
+/**
+ * Calculate the endscore out of the time used and the number of correct answers
+ */
+function calculateScore() {
+
+}
 
 /**
  * The function gets called to show the endscreen of the quiz
