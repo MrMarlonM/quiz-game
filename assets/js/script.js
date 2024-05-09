@@ -4,7 +4,6 @@
     // Random question gets created and first question + answers gets loaded
         randomQuestions(questions);
         let questionsAsked = 0;
-        let correctAnswers = 0;
         startGame(questionsAsked);
     
     // Start timer for game, which calls the end game function when time is over
@@ -12,7 +11,7 @@
             endQuiz();
         }, 100000);
 
-    // starts countdown for time remaining    
+    // starts countdown for time remaining shown whilst playing and for calculation of score   
         setInterval(updateTime, 1000);
     
     // Logic that listens for a click on one of the answers and then progresses with the next one
