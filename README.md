@@ -1,6 +1,8 @@
 # It's Quiz Time!
 On the website presented, you can play a short Quiz against the clock and reach the top of the leaderboard! You get asked 10 questions in a maximum of 100 seconds. The more you answer correctly in as little time as possible, the higher your score!
 
+![Responsive mockup of landing page](documentation/responsive-mockup.webp)
+
 ## User Story
 ### First Time Visitor
 - As a new visitor to the page, I directly want to understand the structure
@@ -12,6 +14,9 @@ On the website presented, you can play a short Quiz against the clock and reach 
 - I want to top the high score
 - I want to send in questions of my own
 - I want to have different questions than the last time
+
+### Outlook
+In the future, the page could be updated to contain a global leaderboard and allow players the opportunity to send in questions of their own. For now, only the needs of the first-time visitors will be fulfilled and the calculated high score will only be shown on the end screen.
 
 ## Features
 The website will feature an easy-to-understand quiz which you can start to play directly! Interesting questions on many different topics get asked randomly and a score for each round gets calculated.
@@ -27,6 +32,45 @@ The website will feature an easy-to-understand quiz which you can start to play 
 - For writing and editing the code [Gitpod](https://www.gitpod.io/) was used
 - To host the code and the website [Github](https://github.com/) was used
 - For the version control of the website [Git](https://git-scm.com/) was used
+
+### Navigation
+The navigation on the website will happen through buttons. Since there is no specific navigation section, it will be explained further down, together with the specific pages.
+
+### Start Screen with Rules
+The landing page contains the heading in big bold letters saying "It's Quiz Time!". Following is a short explanation of the rules and a button that lets the user start the game.
+In the footer is the name of the author which is at the same time a clickable link that opens the github page of the author in a new tab. Also, the copyright is found in it.
+
+Here is an image of the landing page on big screens:
+![Image of index.html page on big screen](documentation/index-desktop.webp)
+
+For mobile screens, the content stays essentially the same, but the text field takes up 100% of the width.
+Here is an image showing the landing page on a mobile device:
+![Image of index.html on mobile screen](documentation/index-phone.webp)
+
+### Game page with the quiz
+On the game.html page, the actual quiz is happening.  
+At the top sits the title, followed by the question together with a counter on what question out of ten the player is at the moment.  
+After that, the answer fields are presented. They have a box-shadow to put them in the front and show the user that they are clickable.  
+Under the container holding the question and the answer options are a counter for the correct answers and a countdown for the time.  
+At the bottom is once again the footer.
+
+Here is an image of the game on a large screen:
+![Image of the game on a large screen](documentation/game-desktop.webp)
+
+On a small screen, everything gets thinned out and the answer options are presented under each other to maintain good readability.  
+Here is an image of the game on a small screen:
+![Image of the game on a small screen](documentation/game-phone.webp)
+
+### End screen
+After finishing the game, the end screen will be presented.  
+On it, the calculated score for the round will be shown together with two buttons. One button to start a new game brings the user back to the game page and the other button brings the user back to the rules and therefore links to the landing page.
+
+Here is an image of the end screen on a large screen:
+![Image of end screen on a large device](documentation/endscreen-desktop.webp)
+
+Here is an image of the end screen on a small device:
+![Image of end screen on a small device](documentation/endscreen-phone.webp)
+
 
 ## Design
 ### Wireframes
