@@ -218,3 +218,7 @@ To build the eventListeners for the project, it was really helpful to look up ag
 For realizing a timeout function I used this article from [freecodecamp](https://www.freecodecamp.org/news/javascript-settimeout-how-to-set-a-timer-in-javascript-or-sleep-for-n-seconds/).
 
 For implementing a countdown the following article from [w3schools about the setInterval()](https://www.w3schools.com/jsref/met_win_setinterval.asp) helped a lot.
+
+##  Acknowledgments
+- I want to thank [Iuliia Konovalova](https://github.com/IuliiaKonovalova) for her guidance and mentoring throughout the project
+- Many thanks to [Code Institute](https://codeinstitute.net/) for providing the learning content
