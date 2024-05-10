@@ -162,6 +162,19 @@ Further down the table containing the testing data is provided.
 - Javascript
     - There were no problems found when passing the (jshint javascript validator)[https://jshint.com/]
 
+### Google Lighthouse
+When testing, all three displayed pages were able to get a perfect score in every metric.
+Especially the accessibility score is important since it means that the pages are designed as inclusive and readable as possible.  
+
+Here is the score of the index page (rules)
+![Image lighthouse score index.html](documentation/lighthouse-index.webp)
+
+Here is the score of the game page 
+![Image of lighthouse score game.html](documentation/lighthouse-game.webp)
+
+Here the is score of the end screen 
+![image of the lighthouse score end screen](documentation/lighthouse-endscreen.webp) 
+
 ## Bugs
 ### Unsolved Bugs
 No unsolved Bugs are left.
