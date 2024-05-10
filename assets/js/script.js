@@ -30,7 +30,7 @@
                 startGame(questionsAsked);
             }
         });
-    })
+    });
     
     /**
      * The function starts each round of the game, until the maximum of 10 games is
@@ -43,7 +43,7 @@
         } else {
             endQuiz();
         }
-    };
+    }
     
     /**
      * When called, the function updates the game with a new question and new answers
@@ -55,7 +55,7 @@
         document.getElementById('answer2').textContent = question.answer2[0];
         document.getElementById('answer3').textContent = question.answer3[0];
         document.getElementById('answer4').textContent = question.answer4[0];
-    };
+    }
     
     /**
      * When called, the function creates a radom array using the Fisher Yates Method
@@ -67,7 +67,7 @@
             array[i] = array[random];
             array[random] = safe;
         }
-    };
+    }
     
     /**
      * Check if the answer is correct and give out a value of true or false
@@ -107,7 +107,7 @@
         let newTime = oldTime - 1;
         timeRemaining.innerHTML = newTime;
         }
-    };
+    }
     
     /**
      * Updates the number of questions asked with each round
@@ -362,5 +362,5 @@ const questions = [
         answer3: ['Marie Curie', false],
         answer4: ['Alexander Fleming', true],
     },
-]
+];
 

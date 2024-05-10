@@ -153,6 +153,15 @@ Further down the table containing the testing data is provided.
 | Phone | end screen | Button "Go to Rules" | Loads index.html | Yes | - |
 | Phone | end screen | Footer link author | Open Github page | Yes | Opens in new tab | 
 
+### Validator Testing
+- HTML
+    - When testing index.html, no errors were returned from the [official W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmrmarlonm.github.io%2Fquiz-game%2Findex.html)
+    - When testing game.html, no errors were returned from the [official W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmrmarlonm.github.io%2Fquiz-game%2Fgame.html)
+- CSS
+    - No errors were returned when passing the [(jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmrmarlonm.github.io%2Fquiz-game%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- Javascript
+    - There were no problems found when passing the (jshint javascript validator)[https://jshint.com/]
+
 ## Bugs
 ### Unsolved Bugs
 No unsolved Bugs are left.
