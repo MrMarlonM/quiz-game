@@ -111,7 +111,20 @@ After correcting these two errors the score gets calculated correctly and shows 
 - After running the endGame() function, the error "Uncaught TypeError: Cannot read properties of null (reading 'innerHTML')" appeared in the console. This error originated from the updateCorrectAnswers() and updateTime() functions attempting to access elements that no longer existed in the DOM. The error was also caused by the calculateScore() function for the same reason. The issue came up because the functions tried to access the span with the id "correct-answers" and the span with the id "time-remaining", but both spans got removed from the endGame() function. 
 To resolve the issue an if statement was implemented in all three functions. The statement checks if the targeted elements still exist in the DOM and only executes the code when they do.
 
+## Deployment
+### Deployment to Github Pages
+The website was deployed to GitHub pages ([here](https://mrmarlonm.github.io/quiz-game/index.html)). 
 
+Here are the steps taken:
+- In the GitHub repository navigate to Settings
+- Under the point "Code and Automation" click on pages
+- Find the drop-down menu for the source section and select the Main Branch
+- Click on "Save"
+- Now the page is deployed and after refreshing a link to the page will be provided
+
+### Local Deployment
+It is also possible to open a cloned version of the page, For that you need to type the following in your IDE Terminal:
+- `git clone https://github.com/MrMarlonM/quiz-game.git`
 
 ## Credits
 ### Tools
