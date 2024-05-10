@@ -68,12 +68,11 @@ h1 {
 /*Add style to elements of playfied*/
 .text-field {
     background-color: #94CDF0;
-    border: 1px solid black;
-    border-radius: 15px;
-    box-shadow: 5px 5px 3px grey;
+    border: 2px solid black;
     width: 20rem;
     font-size: large;
     padding: 5px 8px;
+    margin-top: 1px;
 }
 
 /*Style for game elements*/
