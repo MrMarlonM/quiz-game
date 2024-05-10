@@ -87,18 +87,24 @@
     
     // Gets called when answer is correct, to update the correct answers by 1
     function updateCorrectAnswers() {
-        let oldScore = parseInt(document.getElementById('correct-answers').innerHTML);
+        let correctAnswer = document.getElementById('correct-answers');
+        if (correctAnswer) {
+        let oldScore = parseInt(correctAnswer.innerHTML);
         let newScore = oldScore + 1;
-        document.getElementById('correct-answers').innerHTML = newScore;
+        correctAnswer.innerHTML = newScore;
+        }
     }
 
     /** 
      *Gets called every second to update the time used by the player by 1 
      */
     function updateTime() {
-        let oldTime = parseInt(document.getElementById('time-remaining').innerHTML);
+        let timeRemaining = document.getElementById('time-remaining');
+        if (timeRemaining) {
+        let oldTime = parseInt(timeRemaining.innerHTML);
         let newTime = oldTime - 1;
-        document.getElementById('time-remaining').innerHTML = newTime;
+        timeRemaining.innerHTML = newTime;
+        }
     };
     
     /**
