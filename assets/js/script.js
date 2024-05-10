@@ -118,11 +118,14 @@
      * Calculate the endscore out of the time used and the number of correct answers
      */
     function calculateScore() {
-        let correctAnswers = parseInt(document.getElementById('correct-answers').innerHTML); 
-        let timeRemaining = parseInt(document.getElementById('time-remaining').innerHTML);
-        let score = correctAnswers * 100 + timeRemaining * 10;
+        let correctAnswers = document.getElementById('correct-answers'); 
+        let timeRemaining = document.getElementById('time-remaining');
+        
+        if (correctAnswers && timeRemaining) {
+        let score = parseInt(correctAnswers.innerHTML) * 100 + parseInt(timeRemaining.innerHTML) * 10;
 
         return score;
+        }
     }
     
     /**
