@@ -86,24 +86,24 @@ h1 {
     /*Grid properties*/
     display: grid;
     gap: 10px;
-    grid-template-columns:12rem 12rem;
-    grid-template-rows:auto auto;
-    font-size:smaller;
+    grid-template-columns: 12rem 12rem;
+    grid-template-rows: auto auto;
+    font-size: smaller;
     margin-bottom: 10px;
 }
 
-.answer > div {
-        /*General properties*/
-        min-height: 10rem;
-        background-color: #94CDF0;
-        border: 1px solid black;
-        border-radius: 15px;
-        box-shadow: 5px 5px 3px grey;
-        padding: 5px 8px;
+.answer>div {
+    /*General properties*/
+    min-height: 10rem;
+    background-color: #94CDF0;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 5px 5px 3px grey;
+    padding: 5px 8px;
 }
 
-.answer > div:hover {
-    background-color: #90E0EF; 
+.answer>div:hover {
+    background-color: #90E0EF;
 }
 
 /*Style for button*/
@@ -147,11 +147,13 @@ footer a:hover {
 
 /*Media Query for mobile devices*/
 @media only screen and (max-width: 480px) {
+
     /*General Style*/
-    main {
-        width: 100%;
+    main,
+    h1 {
+        width: 90%;
     }
-    
+
     /*Style for index*/
     .playfield {
         width: auto;
@@ -168,29 +170,29 @@ footer a:hover {
         margin-bottom: 10px;
 
     }
- 
+
     /*Style for game*/
-   .answer {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    width: 90%;
-    height: auto;
-}
+    .answer {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        width: 90%;
+        height: auto;
+    }
 
-.answer > div {
-    margin-bottom: 10px;
-    height: auto;
-    min-height: 5rem;
-}
+    .answer>div {
+        margin-bottom: 10px;
+        height: auto;
+        min-height: 5rem;
+    }
 
-.answer > div:hover {
-    background-color: #94CDF0; 
-}
+    .answer>div:hover {
+        background-color: #94CDF0;
+    }
 
     /*Style Footer*/
     footer {
-        width: 100%;
+        width: 90%;
         font-size: smaller;
     }
 }
