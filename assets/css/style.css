@@ -183,6 +183,11 @@ footer a:hover {
     height: auto;
     min-height: 5rem;
 }
+
+.answer > div:hover {
+    background-color: #94CDF0; 
+}
+
     /*Style Footer*/
     footer {
         width: 100%;

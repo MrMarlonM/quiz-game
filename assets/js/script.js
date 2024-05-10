@@ -37,6 +37,7 @@
     function startGame(questionsAsked) {
         if (questionsAsked < 10) {
             updateQuiz(questions[questionsAsked]);
+            updateQuestionsAsked(questionsAsked);
         } else {
             endQuiz();
         }
@@ -100,6 +101,13 @@
         document.getElementById('time-remaining').innerHTML = newTime;
     };
     
+    /**
+     * Updates the number of questions asked with each round
+     */
+    function updateQuestionsAsked(questionsAsked) {
+        document.getElementById('question-asked').innerHTML = questionsAsked + 1;
+    }
+
     /**
      * Calculate the endscore out of the time used and the number of correct answers
      */
