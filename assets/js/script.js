@@ -119,18 +119,14 @@
         document.getElementById('endscreen').innerHTML = `
         <div class="playfield last-screen">
             <div class="text-field"><strong>Your score:</strong> ${finalScore}</div>
-            <form method="GET" action="game.html">
-                <button id="start-game" aria-label="click on the button to
-                start a new game">
-                    Start a new Game
-                </button>
-            </form>
-            <form method="GET" action="index.html">
-                <button id="start-game" aria-label="click on the button and get back
-                to the rules">
-                    Go to the Rules
-                </button>
-            </form>
+            <button onclick="location.href='game.html';"  aria-label="click on the button to
+            start a new game">
+                Start a new Game
+            </button>
+            <button onclick="location.href='index.html';" aria-label="click on the button and get back
+            to the rules">
+                Go to the Rules
+            </button>
         </div>`;
     }
 
