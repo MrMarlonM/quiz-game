@@ -1,6 +1,8 @@
 # It's Quiz Time!
 On the website presented, you can play a short Quiz against the clock and reach the top of the leaderboard! You get asked 10 questions in a maximum of 100 seconds. The more you answer correctly in as little time as possible, the higher your score!
 
+Click [here](https://mrmarlonm.github.io/quiz-game/index.html) for the deployed version of the game.
+
 ![Responsive mockup of landing page](documentation/responsive-mockup.webp)
 
 ## User Story
@@ -90,6 +92,66 @@ Since it is important for the quiz that all questions and answers can be read an
 For the coloring of the website, a mixture of blue and light cyan colors was used. Through the harmonious and subtle feeling they create, a peaceful atmosphere to concentrate in is created. At the same time, the colors deliver a certain contrast without being overpowering.
 
 ![Image of the color palette used](documentation/colors.webp)
+
+## Testing
+### Manual Testing
+to ensure that everything works on a wide variety of devices the game was tested in Chrome, Firefox, Opera and on a Google Pixel Phone. Whilst testing the page and all its functions manually, no problems were found and everything works as intended.  
+Further down the table containing the testing data is provided.
+
+| Browser | Page | Action | Expected Result | Did it work? | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Chrome | index.html (rules) | Button "Start the Game" | Load page game.html | Yes | - |
+| Chrome | index.html (rules) | Footer link author | Open Github page | Yes | Opens in new tab |
+| Chrome | game.html | Question Nr. | After loading the next question one gets added | Yes | - |
+| Chrome | game.html | Click answer 1 | Answer gets selected, new question loads | Yes | - |
+| Chrome | game.html | Click answer 2 | Answer gets selected, new question loads | Yes | - |
+| Chrome | game.html | Click answer 3 | Answer gets selected, new question loads | Yes | - |
+| Chrome | game.html | Click answer 4 | Answer gets selected, new question loads | Yes | - |
+| Chrome | game.html | Corrects answers counter | With each correct answer one gets added | Yes | Only correct answers are counted |
+| Chrome | game.html | time remaining countdown | Each second one gets subtracted, when reaching zero the game ends | Yes | - |
+| Chrome | game.html | Footer link author | Open Github page | Yes | Opens in new tab |
+| Chrome | end screen | Button "Start new Game" | Loads a new game | Yes | - |
+| Chrome | end screen | Button "Go to Rules" | Loads index.html | Yes | - |
+| Chrome | end screen | Footer link author | Open Github page | Yes | Opens in new tab | 
+| Chrome | index.html (rules) | Button "Start the Game" | Load page game.html | Yes | - |
+| Chrome | index.html (rules) | Footer link author | Open Github page | Yes | Opens in new tab |
+| Firefox | game.html | Question Nr. | After loading the next question one gets added | Yes | - |
+| Firefox | game.html | Click answer 1 | Answer gets selected, new question loads | Yes | - |
+| Firefox | game.html | Click answer 2 | Answer gets selected, new question loads | Yes | - |
+| Firefox | game.html | Click answer 3 | Answer gets selected, new question loads | Yes | - |
+| Firefox | game.html | Click answer 4 | Answer gets selected, new question loads | Yes | - |
+| Firefox | game.html | Corrects answers counter | With each correct answer one gets added | Yes | Only correct answers are counted |
+| Firefox | game.html | time remaining countdown | Each second one gets subtracted, when reaching zero the game ends | Yes | - |
+| Firefox | game.html | Footer link author | Open Github page | Yes | Opens in new tab |
+| Firefox | end screen | Button "Start new Game" | Loads a new game | Yes | - |
+| Firefox | end screen | Button "Go to Rules" | Loads index.html | Yes | - |
+| Firefox | end screen | Footer link author | Open Github page | Yes | Opens in new tab | 
+| Opera | index.html (rules) | Button "Start the Game" | Load page game.html | Yes | - |
+| Opera | index.html (rules) | Footer link author | Open Github page | Yes | Opens in new tab |
+| Opera | game.html | Question Nr. | After loading the next question one gets added | Yes | - |
+| Opera | game.html | Click answer 1 | Answer gets selected, new question loads | Yes | - |
+| Opera | game.html | Click answer 2 | Answer gets selected, new question loads | Yes | - |
+| Opera | game.html | Click answer 3 | Answer gets selected, new question loads | Yes | - |
+| Opera | game.html | Click answer 4 | Answer gets selected, new question loads | Yes | - |
+| Opera | game.html | Corrects answers counter | With each correct answer one gets added | Yes | Only correct answers are counted |
+| Opera | game.html | time remaining countdown | Each second one gets subtracted, when reaching zero the game ends | Yes | - |
+| Opera | game.html | Footer link author | Open Github page | Yes | Opens in new tab |
+| Opera | end screen | Button "Start new Game" | Loads a new game | Yes | - |
+| Opera | end screen | Button "Go to Rules" | Loads index.html | Yes | - |
+| Opera | end screen | Footer link author | Open Github page | Yes | Opens in new tab | 
+| Phone | index.html (rules) | Button "Start the Game" | Load page game.html | Yes | - |
+| Phone | index.html (rules) | Footer link author | Open Github page | Yes | Opens in new tab |
+| Phone | game.html | Question Nr. | After loading the next question one gets added | Yes | - |
+| Phone | game.html | Click answer 1 | Answer gets selected, new question loads | Yes | - |
+| Phone | game.html | Click answer 2 | Answer gets selected, new question loads | Yes | - |
+| Phone | game.html | Click answer 3 | Answer gets selected, new question loads | Yes | - |
+| Phone | game.html | Click answer 4 | Answer gets selected, new question loads | Yes | - |
+| Phone | game.html | Corrects answers counter | With each correct answer one gets added | Yes | Only correct answers are counted |
+| Phone | game.html | time remaining countdown | Each second one gets subtracted, when reaching zero the game ends | Yes | - |
+| Phone | game.html | Footer link author | Open Github page | Yes | Opens in new tab |
+| Phone | end screen | Button "Start new Game" | Loads a new game | Yes | - |
+| Phone | end screen | Button "Go to Rules" | Loads index.html | Yes | - |
+| Phone | end screen | Footer link author | Open Github page | Yes | Opens in new tab | 
 
 ## Bugs
 ### Unsolved Bugs
