@@ -1,3 +1,5 @@
+ /* jshint esversion: 11 */
+
  // Makes sure the game starts, once the game.html website is fully loaded 
  document.addEventListener("DOMContentLoaded", function () {
 
@@ -96,7 +98,7 @@
     }
 
     /** 
-     *Gets called every second to update the time used by the player by 1 
+     *Gets called every second to update the time used by 1 
      */
     function updateTime() {
         let timeRemaining = document.getElementById('time-remaining');
@@ -140,16 +142,15 @@
             start a new game">
                 Start a new Game
             </button>
-            <button onclick="location.href='index.html';" aria-label="click on the button and get back
+            <button onclick="location.href='index.html';" aria-label="click on the button and go back
             to the rules">
                 Go to the Rules
             </button>
         </div>`;
     }
 
-/**
- * Array of questions for the quiz
- */
+
+// Array of questions for the quiz
 const questions = [
     {
         question: 'Who wrote the novel "1984"?',
