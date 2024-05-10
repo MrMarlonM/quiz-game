@@ -21,6 +21,7 @@ body {
     min-height: 100vh;
     font-family: "Noto Serif", serif;
     color: #000000;
+    font-size: 150%;
 }
 
 main {
@@ -167,22 +168,21 @@ footer a:hover {
         margin-bottom: 10px;
 
     }
-
+ 
     /*Style for game*/
-    .answer {
-        display: flex;
-        flex-direction: column;
-        gap: 0px;
-        width: 90%;
-        height: auto;
-    }
+   .answer {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    width: 90%;
+    height: auto;
+}
 
-    .answer > div {
-        margin-bottom: 10px;
-        height: auto;
-        min-height: auto;
-    }
-
+.answer > div {
+    margin-bottom: 10px;
+    height: auto;
+    min-height: 5rem;
+}
     /*Style Footer*/
     footer {
         width: 100%;
