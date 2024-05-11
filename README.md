@@ -182,19 +182,27 @@ No unsolved Bugs are left.
 
 ### Solved Bugs
 While developing the game, the following bugs were found and corrected:
-- The quiz UI encountered a layout issue when displaying lengthy questions or answers. Text content overflowed its designated containers, making it unreadable on some screens.
+- *Bug 1*   
+The quiz UI encountered a layout issue when displaying lengthy questions or answers. Text content overflowed its designated containers, making it unreadable on some screens.  
+*Solution*  
 To address this, the container elements responsible for holding questions and answers were modified. Their height property was adjusted from a fixed value to min-height. This allows the containers to dynamically expand vertically to accommodate overflowing content, ensuring readability even on smaller devices with limited screen width (constrained by a fixed max-width property, if applicable).
 
 
-- When starting the game, answering the first question didn't update the quiz. The player could click answers infinitely without progressing to the next question. This also prevented the checkAnswer function from working properly.
-To solve the problem, I moved the event listener for answer clicks and the logic for checking answers and updating the score outside of the startGame function. This ensures the listener and logic are active throughout the game. Additionally, the startGame function now receives the questionsAsked variable and score variables from the event listener logic, allowing the game to update after each answer and track the score.
+- *Bug 2*  
+When starting the game, answering the first question didn't update the quiz. The player could click answers infinitely without progressing to the next question. This also prevented the `checkAnswer() function` from working properly.  
+*Solution*  
+To solve the problem, I moved the event listener for answer clicks and the logic for checking answers and updating the score outside of the `startGame() function`. This ensures the listener and logic are active throughout the game. Additionally, the `startGame() function` now receives the `questionsAsked variable` and `score variable` from the event listener logic, allowing the game to update after each answer and track the score.
 
-- The final score wasn't displaying correctly on the end screen. The endQuiz function received an undefined value for the score.
-Whilst checking the code, the issue could be tracked down to the calculateScore function. There were two problems found. The variable score wasn't declared with let and the return statement for the score was missing.
+- *Bug 3*  
+The final score wasn't displaying correctly on the end screen. The `endQuiz() function` received an undefined value for the score.  
+*Solution*  
+Whilst checking the code, the issue could be tracked down to the `calculateScore() function`. There were two problems found. The `variable score` wasn't declared with `let` and the `return` statement for the score was missing.
 After correcting these two errors the score gets calculated correctly and shows on the endscreen.
 
-- After running the endGame() function, the error "Uncaught TypeError: Cannot read properties of null (reading 'innerHTML')" appeared in the console. This error originated from the updateCorrectAnswers() and updateTime() functions attempting to access elements that no longer existed in the DOM. The error was also caused by the calculateScore() function for the same reason. The issue came up because the functions tried to access the span with the id "correct-answers" and the span with the id "time-remaining", but both spans got removed from the endGame() function. 
-To resolve the issue an if statement was implemented in all three functions. The statement checks if the targeted elements still exist in the DOM and only executes the code when they do.
+- *Bug 4*  
+After running the `endGame() function`, the error `"Uncaught TypeError: Cannot read properties of null (reading 'innerHTML')"` appeared in the console. This error originated from the `updateCorrectAnswers()` and `updateTime()` functions attempting to access elements that no longer existed in the DOM. The error was also caused by the `calculateScore()` function for the same reason. The issue came up because the functions tried to access the span with the id "correct-answers" and the span with the id "time-remaining", but both spans got removed from the `endGame()` function.  
+*Solution*   
+To resolve the issue an `if statement` was implemented in all three functions. The statement checks if the targeted elements still exist in the DOM and only executes the code when they do.
 
 ## Deployment
 ### Deployment to Github Pages
