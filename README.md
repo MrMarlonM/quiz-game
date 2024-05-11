@@ -1,9 +1,9 @@
 # It's Quiz Time!
 On the website presented, you can play a short Quiz against the clock and reach the top of the leaderboard! You get asked 10 questions in a maximum of 100 seconds. The more you answer correctly in as little time as possible, the higher your score!
 
-Click [here](https://mrmarlonm.github.io/quiz-game/index.html) for the deployed version of the game.
+Click [here](https://mrmarlonm.github.io/quiz-game/) for the deployed version of the game.
 
-![Responsive mockup of landing page](documentation/responsive-mockup.webp)
+![Responsive mockup of landing page](documentation/responsive-mockup.webp)  
 
 ## User Story
 ### First Time Visitor
@@ -20,10 +20,7 @@ Click [here](https://mrmarlonm.github.io/quiz-game/index.html) for the deployed 
 ### Outlook
 In the future, the page could be updated to contain a global leaderboard and allow players the opportunity to send in questions of their own. For now, only the needs of the first-time visitors will be fulfilled and the calculated high score will only be shown on the end screen.
 
-## Features
-The website will feature an easy-to-understand quiz which you can start to play directly! Interesting questions on many different topics get asked randomly and a score for each round gets calculated.
-
-### Technology used
+## Technology used
 - For the general structure of the page, [HTML](https://www.w3schools.com/html/) was used
 - For styling purposes, [CSS](https://www.w3schools.com/html/html_css.asp) was used
     - [Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) was used to make elements responsive
@@ -33,7 +30,11 @@ The website will feature an easy-to-understand quiz which you can start to play 
 - For the creation of the wireframes and the workflow, [Balsamiq](https://balsamiq.com/) was used
 - For writing and editing the code [Gitpod](https://www.gitpod.io/) was used
 - To host the code and the website [Github](https://github.com/) was used
+- The website got deployed to [Github Pages](https://pages.github.com/)
 - For the version control of the website [Git](https://git-scm.com/) was used
+
+## Features
+The website will feature an easy-to-understand quiz which you can start to play directly! Interesting questions on many different topics get asked randomly and a score for each round gets calculated.
 
 ### Navigation
 The navigation on the website will happen through buttons. Since there is no specific navigation section, it will be explained further down, together with the specific pages.
@@ -43,11 +44,11 @@ The landing page contains the heading in big bold letters saying "It's Quiz Time
 In the footer is the name of the author which is at the same time a clickable link that opens the github page of the author in a new tab. Also, the copyright is found in it.
 
 Here is an image of the landing page on big screens:
-![Image of index.html page on big screen](documentation/index-desktop.webp)
+![Image of index.html page on big screen](documentation/index-desktop.webp)  
 
 For mobile screens, the content stays essentially the same, but the text field takes up 100% of the width.
 Here is an image showing the landing page on a mobile device:
-![Image of index.html on mobile screen](documentation/index-phone.webp)
+![Image of index.html on mobile screen](documentation/index-phone.webp)  
 
 ### Game page with the quiz
 On the game.html page, the actual quiz is happening.  
@@ -57,21 +58,21 @@ Under the container holding the question and the answer options are a counter fo
 At the bottom is once again the footer.
 
 Here is an image of the game on a large screen:
-![Image of the game on a large screen](documentation/game-desktop.webp)
+![Image of the game on a large screen](documentation/game-desktop.webp)  
 
 On a small screen, everything gets thinned out and the answer options are presented under each other to maintain good readability.  
 Here is an image of the game on a small screen:
-![Image of the game on a small screen](documentation/game-phone.webp)
+![Image of the game on a small screen](documentation/game-phone.webp)  
 
 ### End screen
 After finishing the game, the end screen will be presented.  
 On it, the calculated score for the round will be shown together with two buttons. One button to start a new game brings the user back to the game page and the other button brings the user back to the rules and therefore links to the landing page.
 
 Here is an image of the end screen on a large screen:
-![Image of end screen on a large device](documentation/endscreen-desktop.webp)
+![Image of end screen on a large device](documentation/endscreen-desktop.webp)  
 
 Here is an image of the end screen on a small device:
-![Image of end screen on a small device](documentation/endscreen-phone.webp)
+![Image of end screen on a small device](documentation/endscreen-phone.webp)  
 
 
 ## Design
@@ -167,13 +168,13 @@ When testing, all three displayed pages were able to get a perfect score in ever
 Especially the accessibility score is important since it means that the pages are designed as inclusive and readable as possible.  
 
 Here is the score of the index page (rules)
-![Image lighthouse score index.html](documentation/lighthouse-index.webp)
+![Image lighthouse score index.html](documentation/lighthouse-index.webp)  
 
 Here is the score of the game page 
-![Image of lighthouse score game.html](documentation/lighthouse-game.webp)
+![Image of lighthouse score game.html](documentation/lighthouse-game.webp)  
 
 Here the is score of the end screen 
-![image of the lighthouse score end screen](documentation/lighthouse-endscreen.webp) 
+![image of the lighthouse score end screen](documentation/lighthouse-endscreen.webp)   
 
 ## Bugs
 ### Unsolved Bugs
@@ -197,7 +198,7 @@ To resolve the issue an if statement was implemented in all three functions. The
 
 ## Deployment
 ### Deployment to Github Pages
-The website was deployed to GitHub pages ([here](https://mrmarlonm.github.io/quiz-game/index.html)). 
+The website was deployed to GitHub pages ([here](https://mrmarlonm.github.io/quiz-game/)). 
 
 Here are the steps taken:
 - In the GitHub repository navigate to Settings
@@ -219,18 +220,16 @@ The following tools and websites were used in the creation of this website:
 - [Dopelycolors](https://colors.dopely.top/) to find a color palette
 
 ### Content
-The questions and answers are taken from the ["LiveReacting Blog"](https://blog.livereacting.com/100-fun-general-knowledge-quiz-questions-2024/).
+- The questions and answers are taken from the ["LiveReacting Blog"](https://blog.livereacting.com/100-fun-general-knowledge-quiz-questions-2024/)
+- The favicon is a picture taken from [Pixabay](https://pixabay.com/de/illustrations/quiz-frage-spiel-pr%C3%BCfung-antworten-2004350/)
 
 ### Logic
-To build the Fisher-Yates sorting algorithm that randomizes the array the following content was very helpful:
-- [w3schools about the Fisher-Yates Method](https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_sort_random2)
-- [A concise video of "Bro Code" about the Fisher-Yates-Shuffle](https://www.youtube.com/watch?v=FGAUekwri1Q)
-
-To build the eventListeners for the project, it was really helpful to look up again how it was done in the [Love Maths Walkthrough project](https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode).
-
-For realizing a timeout function I used this article from [freecodecamp](https://www.freecodecamp.org/news/javascript-settimeout-how-to-set-a-timer-in-javascript-or-sleep-for-n-seconds/).
-
-For implementing a countdown the following article from [w3schools about the setInterval()](https://www.w3schools.com/jsref/met_win_setinterval.asp) helped a lot.
+- To build the Fisher-Yates sorting algorithm that randomizes the array the following content was very helpful:
+    - [w3schools about the Fisher-Yates Method](https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_sort_random2)
+    - [A concise video of "Bro Code" about the Fisher-Yates-Shuffle](https://www.youtube.com/watch?v=FGAUekwri1Q)
+- To build the eventListeners for the project, it was really helpful to look up again how it was done in the [Love Maths Walkthrough project](https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode).
+- For realizing a timeout function I used this article from [freecodecamp](https://www.freecodecamp.org/news/javascript-settimeout-how-to-set-a-timer-in-javascript-or-sleep-for-n-seconds/).
+- For implementing a countdown the following article from [w3schools about the setInterval()](https://www.w3schools.com/jsref/met_win_setinterval.asp) helped a lot.
 
 ##  Acknowledgments
 - I want to thank [Iuliia Konovalova](https://github.com/IuliiaKonovalova) for her guidance and mentoring throughout the project
