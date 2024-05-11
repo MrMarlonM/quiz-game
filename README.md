@@ -43,11 +43,11 @@ The navigation on the website will happen through buttons. Since there is no spe
 The landing page contains the heading in big bold letters saying "It's Quiz Time!". Following is a short explanation of the rules and a button that lets the user start the game.
 In the footer is the name of the author which is at the same time a clickable link that opens the github page of the author in a new tab. Also, the copyright is found in it.
 
-Here is an image of the landing page on big screens:
+Here is an image of the landing page on big screens:  
 ![Image of index.html page on big screen](documentation/index-desktop.webp)  
 
 For mobile screens, the content stays essentially the same, but the text field takes up 100% of the width.
-Here is an image showing the landing page on a mobile device:
+Here is an image showing the landing page on a mobile device:  
 ![Image of index.html on mobile screen](documentation/index-phone.webp)  
 
 ### Game page with the quiz
@@ -57,11 +57,11 @@ After that, the answer fields are presented. They have a box-shadow to put them 
 Under the container holding the question and the answer options are a counter for the correct answers and a countdown for the time.  
 At the bottom is once again the footer.
 
-Here is an image of the game on a large screen:
+Here is an image of the game on a large screen:  
 ![Image of the game on a large screen](documentation/game-desktop.webp)  
 
 On a small screen, everything gets thinned out and the answer options are presented under each other to maintain good readability.  
-Here is an image of the game on a small screen:
+Here is an image of the game on a small screen:  
 ![Image of the game on a small screen](documentation/game-phone.webp)  
 
 ### End screen
@@ -69,10 +69,10 @@ After finishing the game, the end screen will be presented.
 On it, the calculated score for the round will be shown together with two buttons. One button to start a new game brings the user back to the game page and the other button brings the user back to the rules and therefore links to the landing page.
 
 Here is an image of the end screen on a large screen:
-![Image of end screen on a large device](documentation/endscreen-desktop.webp)  
+![Image of end screen on a large device](documentation/endscreen-desktop.webp)    
 
-Here is an image of the end screen on a small device:
-![Image of end screen on a small device](documentation/endscreen-phone.webp)  
+Here is an image of the end screen on a small device:  
+![Image of end screen on a small device](documentation/endscreen-phone.webp)    
 
 
 ## Design
