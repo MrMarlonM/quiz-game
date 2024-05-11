@@ -149,9 +149,13 @@ footer a:hover {
 @media only screen and (max-width: 480px) {
 
     /*General Style*/
-    main,
-    h1 {
+    main {
         width: 90%;
+    }
+
+    /*Style for h1*/
+    h1 {
+        font-size: 150%;
     }
 
     /*Style for index*/
@@ -159,6 +163,7 @@ footer a:hover {
         width: auto;
         height: auto;
         gap: 0px;
+        font-size: 1rem;
     }
 
     .playfield h2 {
