@@ -140,19 +140,19 @@ Further down the table containing the testing data is provided.
 | Opera | end screen | Button "Start new Game" | Loads a new game | Yes | - |
 | Opera | end screen | Button "Go to Rules" | Loads index.html | Yes | - |
 | Opera | end screen | Footer link author | Open Github page | Yes | Opens in new tab | 
-| Phone | index.html (rules) | Button "Start the Game" | Load page game.html | Yes | - |
-| Phone | index.html (rules) | Footer link author | Open Github page | Yes | Opens in new tab |
-| Phone | game.html | Question Nr. | After loading the next question one gets added | Yes | - |
-| Phone | game.html | Click answer 1 | Answer gets selected, new question loads | Yes | - |
-| Phone | game.html | Click answer 2 | Answer gets selected, new question loads | Yes | - |
-| Phone | game.html | Click answer 3 | Answer gets selected, new question loads | Yes | - |
-| Phone | game.html | Click answer 4 | Answer gets selected, new question loads | Yes | - |
-| Phone | game.html | Corrects answers counter | With each correct answer one gets added | Yes | Only correct answers are counted |
-| Phone | game.html | time remaining countdown | Each second one gets subtracted, when reaching zero the game ends | Yes | - |
-| Phone | game.html | Footer link author | Open Github page | Yes | Opens in new tab |
-| Phone | end screen | Button "Start new Game" | Loads a new game | Yes | - |
-| Phone | end screen | Button "Go to Rules" | Loads index.html | Yes | - |
-| Phone | end screen | Footer link author | Open Github page | Yes | Opens in new tab | 
+| Chrome for Android | index.html (rules) | Button "Start the Game" | Load page game.html | Yes | - |
+| Chrome for Android | index.html (rules) | Footer link author | Open Github page | Yes | Opens in new tab |
+| Chrome for Android | game.html | Question Nr. | After loading the next question one gets added | Yes | - |
+| Chrome for Android | game.html | Click answer 1 | Answer gets selected, new question loads | Yes | - |
+| Chrome for Android | game.html | Click answer 2 | Answer gets selected, new question loads | Yes | - |
+| Chrome for Android | game.html | Click answer 3 | Answer gets selected, new question loads | Yes | - |
+| Chrome for Android | game.html | Click answer 4 | Answer gets selected, new question loads | Yes | - |
+| Chrome for Android | game.html | Corrects answers counter | With each correct answer one gets added | Yes | Only correct answers are counted |
+| Chrome for Android | game.html | time remaining countdown | Each second one gets subtracted, when reaching zero the game ends | Yes | - |
+| Chrome for Android | game.html | Footer link author | Open Github page | Yes | Opens in new tab |
+| Chrome for Androidone | end screen | Button "Start new Game" | Loads a new game | Yes | - |
+| Chrome for Android | end screen | Button "Go to Rules" | Loads index.html | Yes | - |
+| Chrome for Android | end screen | Footer link author | Open Github page | Yes | Opens in new tab | 
 
 ### Validator Testing
 - HTML
@@ -161,7 +161,9 @@ Further down the table containing the testing data is provided.
 - CSS
     - No errors were returned when passing the [(jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmrmarlonm.github.io%2Fquiz-game%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - Javascript
-    - There were no problems found when passing the (jshint javascript validator)[https://jshint.com/]
+    - There were no problems found when passing the [jshint javascript validator](https://jshint.com/)
+
+    ![Picture of jshint validator testing](documentation/jshint-validator.webp)
 
 ### Google Lighthouse
 When testing, all three displayed pages were able to get a perfect score in every metric.
